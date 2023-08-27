@@ -7,9 +7,14 @@ struct CustomBadgeOrigin: View {
     
     // MARK: - Properties
     
-    var badgeOrigin : BadgeOrigin
-    var textName:String
-    var textURL:String
+    /// The planet  of 'Character'
+    var badgeOrigin: BadgeOrigin
+    
+    /// The name  of 'Character'
+    var textName: String
+    
+    /// The url of 'Character'
+    var textURL: String
    
     var title: String {
         switch badgeOrigin {
@@ -17,13 +22,16 @@ struct CustomBadgeOrigin: View {
             return "Planet"
         }
     }
+    
+    // MARK: - View
+    
     var body: some View {
-        HStack{
+        HStack {
             Image("planet")
                 .padding(.all, 20)
                 .background(Color("around-planet"))
                 .cornerRadius(10)
-            VStack(alignment: .leading, spacing: 0){
+            VStack(alignment: .leading, spacing: 0) {
                 Text(textName)
                     .foregroundColor(.white)
                     .font(.system(size: 17,weight: .bold))
@@ -39,4 +47,3 @@ struct CustomBadgeOrigin: View {
         .padding(.horizontal, 8)
     }
 }
-

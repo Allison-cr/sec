@@ -4,8 +4,14 @@ import SwiftUI
 // MARK: - CharacterDetailView
 
 struct CharacterDetailView: View {
-    let character: Character
+    
+    // MARK: - Properties
+    
+   let character: Character
     @Environment(\.presentationMode) var presentationMode
+    
+    // MARK: - View
+    
     var body: some View {
         NavigationView{
             ZStack {
@@ -13,10 +19,21 @@ struct CharacterDetailView: View {
                     .ignoresSafeArea()
                 ScrollView {
                     VStack(spacing: 0) {
-                        StartInfo(characterImage: character.image, characterName: character.name, characterStatus: character.status)
+                        StartInfo(
+                            characterImage: character.image,
+                            characterName: character.name,
+                            characterStatus: character.status
+                        )
                         VStack(alignment: .leading, spacing: 0) {
-                            FirstInfo(characterSpecies: character.species, characterType: character.type, characterGender: character.gender)
-                            SecondInfo(characterOriginName: character.origin.name, characterOriginURL: character.origin.url)
+                            FirstInfo(
+                                characterSpecies: character.species,
+                                characterType: character.type,
+                                characterGender: character.gender
+                            )
+                            SecondInfo(
+                                characterOriginName: character.origin.name,
+                                characterOriginURL: character.origin.url
+                            )
                             ThirdInfo(character: character)
                         }
                         .frame(maxWidth: .infinity, alignment: .leading)
@@ -29,15 +46,13 @@ struct CharacterDetailView: View {
         .navigationBarItems(leading: backButton)
     }
     var backButton: some View {
-            Button(action: {
-                presentationMode.wrappedValue.dismiss()
-            }) {
-                HStack {
-                    Image("chevron-left")
-                }
+        Button {
+            presentationMode.wrappedValue.dismiss()
+        } label: {
+            Image("chevron-left")
                 .foregroundColor(.white)
-            }
         }
+    }
     
     // MARK: - FirstInfo
     
@@ -45,16 +60,15 @@ struct CharacterDetailView: View {
         
         // MARK: - Properties
         
-        let characterImage : URL
-        let characterName : String
-        let characterStatus : String
-        
+        let characterImage: URL
+        let characterName: String
+        let characterStatus: String
         
         // MARK: - View
         
         var body: some View {
             VStack(spacing: 0) {
-                     if let imageData = try? Data(contentsOf: characterImage), let uiImage = UIImage(data: imageData) {
+                    if let imageData = try? Data(contentsOf: characterImage), let uiImage = UIImage(data: imageData) {
                     Image(uiImage: uiImage)
                         .resizable()
                         .frame(width: 148, height: 148)
@@ -92,7 +106,7 @@ struct CharacterDetailView: View {
                 .foregroundColor(.white)
                 .padding(.top, 24)
                 .padding(.bottom, 16)
-            VStack(spacing: 0){
+            VStack(spacing: 0) {
                 CustomBadgeInfo(badgeInfo: .species, text: characterSpecies)
                 CustomBadgeInfo(badgeInfo: .type, text: characterType.isEmpty ? "None" : characterType)
                 CustomBadgeInfo(badgeInfo: .gender, text: characterGender)
@@ -121,8 +135,12 @@ struct CharacterDetailView: View {
                 .foregroundColor(.white)
                 .padding(.top, 24)
                 .padding(.bottom, 16)
-            VStack{
-                CustomBadgeOrigin(badgeOrigin: .planet, textName: characterOriginName, textURL: characterOriginURL)
+            VStack {
+                CustomBadgeOrigin(
+                    badgeOrigin: .planet,
+                    textName: characterOriginName,
+                    textURL: characterOriginURL
+                )
             }
             .background(Color("back-info"))
             .cornerRadius(16)
@@ -135,7 +153,7 @@ struct CharacterDetailView: View {
         
         // MARK: - Properties
         
-        let character : Character
+        let character: Character
         
         // MARK: - View
         var body: some View {
@@ -146,7 +164,11 @@ struct CharacterDetailView: View {
                     .padding(.top, 24)
                     .padding(.bottom, 8)
                 ForEach(character.episodes, id: \.self) { episode in
-                    CustomBadgeEpisodes(textName: episode.name, textEpisode: episode.episode , textData: episode.air_date)
+                    CustomBadgeEpisodes(
+                        textName: episode.name,
+                        textEpisode: episode.episode,
+                        textData: episode.air_date
+                    )
                         .cornerRadius(16)
                         .padding(.vertical, 8)
                 }
@@ -154,10 +176,3 @@ struct CharacterDetailView: View {
         }
     }
 }
-
-
-
-
-
-
-

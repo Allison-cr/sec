@@ -46,12 +46,21 @@ struct Character: Decodable {
     /// The origin of 'Character'
     let origin: Location
     
-    /// The episodes of 'Character'
+    /// An array of 'Character' episodes
     var episodes: [EpisodeData]
 
     enum CodingKeys: String, CodingKey {
-        case name, gender, species, image, status, type, origin, episodesURLs = "episode"
+        case name
+        case gender
+        case species
+        case image
+        case status
+        case type
+        case origin
+        case episodesURLs = "episode"
     }
+    
+    // MARK: - Initializers
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         name = try container.decode(String.self, forKey: .name)
@@ -83,8 +92,8 @@ struct EpisodeData: Decodable, Hashable {
     let name: String
     
     /// The date  of 'Episode'
-    let air_date : String
+    let air_date: String
     
     /// The number  of 'Episode'
-    let episode : String
+    let episode: String
 }

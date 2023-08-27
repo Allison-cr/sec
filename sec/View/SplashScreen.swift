@@ -7,26 +7,33 @@ import SwiftUI
 // MARK: - SplashScreen
 
 struct SplashScreen: View {
+    
+    // MARK: - View
+    
     var body: some View {
         ZStack{
             Color("background")
-            HStack{
+            HStack {
                Stars()
                Spacer()
             }
-            HStack{
+            HStack {
                 Label()
                 Spacer()
             }
             .padding(.leading, 118)
-        }.ignoresSafeArea()
+        }
+        .ignoresSafeArea()
     }
     
     // MARK: - StarsAdd
     
     private struct StarsAdd: View {
+        
+        // MARK: - View
+        
         var body: some View {
-            VStack(alignment: .leading,spacing: 0){
+            VStack(alignment: .leading,spacing: 0) {
                 Image("Ellipse 9")
                     .padding(.leading, 47)
                     .padding(.top, 4)
@@ -52,8 +59,11 @@ struct SplashScreen: View {
     // MARK: - Stars
     
     private struct Stars: View {
+        
+        // MARK: - View
+        
         var body: some View {
-            VStack(alignment: .leading,spacing: 0){
+            VStack(alignment: .leading,spacing: 0) {
                 Image("Ellipse 4")
                     .padding(.leading, 34)
                     .padding(.top, 98)
@@ -87,18 +97,22 @@ struct SplashScreen: View {
     // MARK: - Label
     
     struct Label: View {
+        
+        // MARK: - View
+        
         var body: some View {
-            VStack{
+            VStack {
                 Image("Frame-2")
                 Image("Frame")
-                    .padding(.top,36)
+                    .padding(.top, 36)
                 Spacer()
             }
             .padding(.top, 164)
         }
     }
-
 }
+
+// MARK: - Previews
 
 struct LaunchScreen_Previews: PreviewProvider {
     static var previews: some View {

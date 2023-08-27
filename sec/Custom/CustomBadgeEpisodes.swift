@@ -7,12 +7,19 @@ struct CustomBadgeEpisodes: View {
     
     // MARK: - Properties
 
+    /// The name  of 'Eppisodes'
     var textName:String
+    
+    /// The number series/season  of 'Eppisodes'
     var textEpisode:String
+    
+    /// The air date  of 'Eppisodes'
     var textData:String
+    
+    // MARK: - View 
 
     var body: some View {
-        HStack{
+        HStack {
             VStack(alignment: .leading, spacing: 0) {
                     Text(textName)
                         .padding(.top, 16)
@@ -30,7 +37,7 @@ struct CustomBadgeEpisodes: View {
                 .padding(.leading, 15.25)
                 .padding(.bottom, 14)
             Spacer()
-            VStack{
+            VStack {
                 Text(textData)
                     .padding(.top, 54)
                     .padding(.bottom, 16)
@@ -41,6 +48,9 @@ struct CustomBadgeEpisodes: View {
         }
         .background(Color("back-info"))
     }
+    
+    // MARK: - Private
+    
   private  func convertEpisodeCode(_ code: String) -> String? {
         let parts = code.split(separator: "E")
         if parts.count == 2, let season = Int(parts[0].dropFirst()), let episode = Int(parts[1]) {
@@ -52,9 +62,15 @@ struct CustomBadgeEpisodes: View {
     }
 }
 
+// MARK: - Previews
+
 struct CustomBadgeEpisodes_Previews: PreviewProvider {
     static var previews: some View {
-        CustomBadgeEpisodes(textName: "Episode Name", textEpisode: "Episode URL", textData: "december")
+        CustomBadgeEpisodes(
+            textName: "Episode Name",
+            textEpisode: "Episode URL",
+            textData: "december"
+        )
     }
 }
 

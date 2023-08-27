@@ -10,9 +10,12 @@ class AppCoordinator {
     
     private let window: UIWindow
 
+    // MARK: - Initializers
+    
     init(window: UIWindow) {
         self.window = window
     }
+    
     func start() {
         let splashScreen = SplashScreen()
         let hostingController = UIHostingController(rootView: splashScreen)
@@ -24,11 +27,13 @@ class AppCoordinator {
             self.showCharacterScreen()
         }
     }
+    
     func showCharacterScreen() {
         let characterViewController = CharacterViewController()
         let navigationController = UINavigationController(rootViewController: characterViewController)
         window.rootViewController = navigationController
     }
+    
     func showCharacterDetailScreen(for character: Character) {
         let characterDetailView = CharacterDetailView(character: character)
         let hostingController = UIHostingController(rootView: characterDetailView)

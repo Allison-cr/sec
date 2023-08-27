@@ -7,8 +7,11 @@ struct CustomBadgeInfo: View {
     
     // MARK: - Properties
     
-    var badgeInfo : BadgeInfo
-    var text:String
+    /// The info  of 'Character'
+    var badgeInfo: BadgeInfo
+    
+    /// The text  of 'Character'
+    var text: String
     
     var title: String {
         switch badgeInfo {
@@ -20,8 +23,11 @@ struct CustomBadgeInfo: View {
             return "Gender"
         }
     }
+    
+    // MARK: - View
+    
     var body: some View {
-        HStack{
+        HStack {
             Text(title)
                 .foregroundColor(Color("info"))
             Spacer()
@@ -30,7 +36,5 @@ struct CustomBadgeInfo: View {
         }
         .padding(.horizontal, 16)
         .padding(.vertical, 8)
-        
     }
 }
-

@@ -6,4 +6,4 @@ enum BadgeOrigin {
     
     /// The planet  of 'Character'
     case planet
-   }
+}

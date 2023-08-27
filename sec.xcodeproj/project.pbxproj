@@ -21,6 +21,7 @@
 		FE968AB22A93744200A0902F /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE968AB12A93744200A0902F /* SplashScreen.swift */; };
 		FE968AD82A9397C100A0902F /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE968AD72A9397C100A0902F /* AppCoordinator.swift */; };
 		FE968B182A939CE600A0902F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE968B172A939CE600A0902F /* SceneDelegate.swift */; };
+		FE968B922A9B8A9800A0902F /* UIScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE968B912A9B8A9800A0902F /* UIScrollView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		FE968AB12A93744200A0902F /* SplashScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
 		FE968AD72A9397C100A0902F /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		FE968B172A939CE600A0902F /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		FE968B912A9B8A9800A0902F /* UIScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIScrollView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 				FE95BED92A9233AD004467F1 /* Custom */,
 				FE968B902A93D47E00A0902F /* Delegate */,
 				FE968AD72A9397C100A0902F /* AppCoordinator.swift */,
+				FE968B932A9B8AAB00A0902F /* Extension  */,
 				FE95BED62A90D002004467F1 /* DataModel */,
 				FE968B8F2A93D45F00A0902F /* View */,
 				FE95BE9F2A8F6592004467F1 /* Assets.xcassets */,
@@ -129,6 +132,14 @@
 				FE968B172A939CE600A0902F /* SceneDelegate.swift */,
 			);
 			path = Delegate;
+			sourceTree = "<group>";
+		};
+		FE968B932A9B8AAB00A0902F /* Extension  */ = {
+			isa = PBXGroup;
+			children = (
+				FE968B912A9B8A9800A0902F /* UIScrollView.swift */,
+			);
+			path = "Extension ";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -205,6 +216,7 @@
 				FE95BEAD2A8F65A6004467F1 /* CharacterCell.swift in Sources */,
 				FE968AD82A9397C100A0902F /* AppCoordinator.swift in Sources */,
 				FE95BED82A923397004467F1 /* CustomBadgeInfo.swift in Sources */,
+				FE968B922A9B8A9800A0902F /* UIScrollView.swift in Sources */,
 				FE95BEB12A8F65AB004467F1 /* CharacterViewController.swift in Sources */,
 				FE95BEDB2A923437004467F1 /* BadgeInfo.swift in Sources */,
 				FE95BEB02A8F65AB004467F1 /* Character.swift in Sources */,
