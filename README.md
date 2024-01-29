@@ -67,7 +67,8 @@ __2. Список персонажей__
 <img src="https://raw.githubusercontent.com/Allison-cr/sec/main/sec/utils/Simulator%20Screenshot%20-%20iPhone%2014%20Pro%20-%202024-01-30%20at%2001.00.33.png" width="230" height="450">
 
 
-> __3.Детальный экран персонажа__ 
+>[!IMPORTANT]  
+__3.Детальный экран персонажа__ 
 
 ```Swift
     func showCharacterDetailScreen(for character: Character) {
