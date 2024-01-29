@@ -59,6 +59,7 @@ __2. Список персонажей__
     }
 }
 ```
+
 >[!IMPORTANT]Пока идет загрузка данных, выведен индикатор загрузки получения данных
 
 <img src="https://raw.githubusercontent.com/Allison-cr/sec/main/sec/utils/Simulator%20Screenshot%20-%20iPhone%2014%20Pro%20-%202024-01-30%20at%2001.00.14.png" width="230" height="450">
@@ -81,3 +82,5 @@ __2. Список персонажей__
 ```
 <img src="https://raw.githubusercontent.com/Allison-cr/sec/main/sec/utils/Simulator%20Screenshot%20-%20iPhone%2014%20Pro%20-%202024-01-30%20at%2001.00.39.png" width="230" height="450">
 <img src="https://raw.githubusercontent.com/Allison-cr/sec/main/sec/utils/Simulator%20Screenshot%20-%20iPhone%2014%20Pro%20-%202024-01-30%20at%2001.00.46.png" width="230" height="450">
+
+
